@@ -6,19 +6,22 @@
         xmlns:local="clr-namespace:WPF_EmployeeManager"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1088.8">
-    <Grid RenderTransformOrigin="0.481,0.669">
+    <Grid x:Name="RootGrid" RenderTransformOrigin="0.481,0.669">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
             <ColumnDefinition Width="0.15*"/>
             <ColumnDefinition Width="0.2*"/>
-            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.03*"/>
             <ColumnDefinition Width="0.05*"/>
-            <ColumnDefinition Width="0.1*"/>
             <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.02*"/>
             <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.02*"/>
             <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.02*"/>
             <ColumnDefinition Width="0.2*"/>
-            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition Width="0.1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -41,26 +44,65 @@
             <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
         
-        <Label Content="Name" Grid.Column="1" Grid.Row="2"/>
-        <Label Content="Surname" Grid.Column="1" Grid.Row="4"/>
-        <Label Content="Year of birth" Grid.Column="1" Grid.Row="6"/>
-        <Label Content="Education" Grid.Column="1" Grid.Row="8"/>
-        <Label Content="Work Position" Grid.Column="1" Grid.Row="10"/>
-        <Label Content="Salary" Grid.Column="1" Grid.Row="12"/>
+        <Label Content="Name" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <Label Content="Surname" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+        <Label Content="Year of birth" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="6"/>
+        <Label Content="Education" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="8"/>
+        <Label Content="Work Position" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="10"/>
+        <Label Content="Salary" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="12"/>
 
-        <TextBox x:Name="Name" Grid.Column="2" Grid.Row="2"/>
-        <TextBox x:Name="Surname" Grid.Column="2" Grid.Row="4"/>
-        <TextBox x:Name="BirthYear" Grid.Column="2" Grid.Row="6"/>
+        <TextBox x:Name="Name" LostFocus="LostFocus" Grid.Column="2" Grid.Row="2"/>
+        <TextBox x:Name="Surname" LostFocus="LostFocus" Grid.Column="2" Grid.Row="4"/>
+        <TextBox x:Name="BirthYear" LostFocus="LostFocus" Grid.Column="2" Grid.Row="6"/>
         <ComboBox x:Name="Education" Grid.Column="2" Grid.Row="8"/>
-        <TextBox x:Name="WorkPosition" Grid.Column="2" Grid.Row="10"/>
-        <TextBox x:Name="Salary" Grid.Column="2" Grid.Row="12"/>
+        <TextBox x:Name="WorkPosition" LostFocus="LostFocus" Grid.Column="2" Grid.Row="10"/>
+        <TextBox x:Name="Salary" LostFocus="LostFocus" Grid.Column="2" Grid.Row="12"/>
         
-        <Label x:Name ="NameError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="2"/>
-        <Label x:Name ="SurameError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="4"/>
-        <Label x:Name ="BirthYearError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="6"/>
-        <Label x:Name ="EducationError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="8"/>
-        <Label x:Name ="WorkError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="10"/>
-        <Label x:Name ="SalaryError" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="12"/>
+        <Label x:Name ="NameError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="2"/>
+        <Label x:Name ="SurnameError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="4"/>
+        <Label x:Name ="BirthYearError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="6"/>
+        <Label x:Name ="EducationError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="8"/>
+        <Label x:Name ="WorkPositionError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="10"/>
+        <Label x:Name ="SalaryError" Visibility="Hidden" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="12"/>
 
+        <Label Content="1" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="0"/>
+        <TextBox x:Name="Name1" IsReadOnly="True" Grid.Column="5" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="Surname1" IsReadOnly="True" Grid.Column="5" Grid.Row="4" Grid.RowSpan="2"/>
+        <TextBox x:Name="BirthYear1" IsReadOnly="True" Grid.Column="5" Grid.Row="6" Grid.RowSpan="2"/>
+        <TextBox x:Name="Education1" IsReadOnly="True" Grid.Column="5" Grid.Row="8" Grid.RowSpan="2"/>
+        <TextBox x:Name="WorkPosition1" IsReadOnly="True" Grid.Column="5" Grid.Row="10" Grid.RowSpan="2"/>
+        <TextBox x:Name="Salary1" IsReadOnly="True" Grid.Column="5" Grid.Row="12" Grid.RowSpan="2"/>
+
+        <Label Content="2" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="0"/>
+        <TextBox x:Name="Name2" IsReadOnly="True" Grid.Column="7" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="Surname2" IsReadOnly="True" Grid.Column="7" Grid.Row="4" Grid.RowSpan="2"/>
+        <TextBox x:Name="BirthYear2" IsReadOnly="True" Grid.Column="7" Grid.Row="6" Grid.RowSpan="2"/>
+        <TextBox x:Name="Education2" IsReadOnly="True" Grid.Column="7" Grid.Row="8" Grid.RowSpan="2"/>
+        <TextBox x:Name="WorkPosition2" IsReadOnly="True" Grid.Column="7" Grid.Row="10" Grid.RowSpan="2"/>
+        <TextBox x:Name="Salary2" IsReadOnly="True" Grid.Column="7" Grid.Row="12" Grid.RowSpan="2"/>
+        
+        <Label Content="3" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="9" Grid.Row="0"/>
+        <TextBox x:Name="Name3" IsReadOnly="True" Grid.Column="9" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="Surname3" IsReadOnly="True" Grid.Column="9" Grid.Row="4" Grid.RowSpan="2"/>
+        <TextBox x:Name="BirthYear3" IsReadOnly="True" Grid.Column="9" Grid.Row="6" Grid.RowSpan="2"/>
+        <TextBox x:Name="Education3" IsReadOnly="True" Grid.Column="9" Grid.Row="8" Grid.RowSpan="2"/>
+        <TextBox x:Name="WorkPosition3" IsReadOnly="True" Grid.Column="9" Grid.Row="10" Grid.RowSpan="2"/>
+        <TextBox x:Name="Salary3" IsReadOnly="True" Grid.Column="9" Grid.Row="12" Grid.RowSpan="2"/>
+        
+        <Label Content="4" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="11" Grid.Row="0"/>
+        <TextBox x:Name="Name4" IsReadOnly="True" Grid.Column="11" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="Surname4" IsReadOnly="True" Grid.Column="11" Grid.Row="4" Grid.RowSpan="2"/>
+        <TextBox x:Name="BirthYear4" IsReadOnly="True" Grid.Column="11" Grid.Row="6" Grid.RowSpan="2"/>
+        <TextBox x:Name="Education4" IsReadOnly="True" Grid.Column="11" Grid.Row="8" Grid.RowSpan="2"/>
+        <TextBox x:Name="WorkPosition4" IsReadOnly="True" Grid.Column="11" Grid.Row="10" Grid.RowSpan="2"/>
+        <TextBox x:Name="Salary4" IsReadOnly="True" Grid.Column="11" Grid.Row="12" Grid.RowSpan="2"/>
+        
+        <Label Content="5" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="13" Grid.Row="0"/>
+        <TextBox x:Name="Name5" IsReadOnly="True" Grid.Column="13" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="Surname5" IsReadOnly="True" Grid.Column="13" Grid.Row="4" Grid.RowSpan="2"/>
+        <TextBox x:Name="BirthYear5" IsReadOnly="True" Grid.Column="13" Grid.Row="6" Grid.RowSpan="2"/>
+        <TextBox x:Name="Education5" IsReadOnly="True" Grid.Column="13" Grid.Row="8" Grid.RowSpan="2"/>
+        <TextBox x:Name="WorkPosition5" IsReadOnly="True" Grid.Column="13" Grid.Row="10" Grid.RowSpan="2"/>
+        <TextBox x:Name="Salary5" IsReadOnly="True" Grid.Column="13" Grid.Row="12" Grid.RowSpan="2"/>
     </Grid>
 </Window>

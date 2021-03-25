@@ -28,5 +28,18 @@ namespace WPF_EmployeeManager
         {
 
         }
+        public void LostFocus(object sender, RoutedEventArgs eventArgs)
+        {
+            TextBox SenderTB = (TextBox) sender;
+            Label ErrorLabel = (Label)RootGrid.FindName(SenderTB.Name + "Error");
+            if (SenderTB.Text == "")
+            {
+                ErrorLabel.Visibility = Visibility.Visible;
+            }
+            else if(SenderTB.Text!="" && SenderTB.IsVisible)
+            {
+                ErrorLabel.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }
