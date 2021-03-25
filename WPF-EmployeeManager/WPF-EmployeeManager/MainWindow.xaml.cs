@@ -24,5 +24,9 @@ namespace WPF_EmployeeManager
         {
             InitializeComponent();
         }
+        public void AddNewEmployee(object sender, RoutedEventArgs eventArgs)
+        {
+
+        }
     }
 }

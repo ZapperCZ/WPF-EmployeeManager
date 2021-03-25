@@ -8,5 +8,22 @@ namespace WPF_EmployeeManager
 {
     class Person
     {
+        string Name { get; set; }
+        string Surname { get; set; }
+        int BirthYear { get; set; }
+
+        public Person(string name, string surname, int birthYear)
+        {
+            Name = name;
+            Surname = surname;
+            BirthYear = birthYear;
+        }
+
+        public Person()
+        {
+            Name = "Unknown";
+            Surname = "Unknown";
+            BirthYear = 1991;
+        }
     }
 }
