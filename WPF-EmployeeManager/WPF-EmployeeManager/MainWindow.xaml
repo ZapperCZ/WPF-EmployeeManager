@@ -54,7 +54,11 @@
         <TextBox x:Name="Name" LostFocus="LostFocus" Grid.Column="2" Grid.Row="2"/>
         <TextBox x:Name="Surname" LostFocus="LostFocus" Grid.Column="2" Grid.Row="4"/>
         <TextBox x:Name="BirthYear" LostFocus="LostFocus" Grid.Column="2" Grid.Row="6"/>
-        <ComboBox x:Name="Education" Grid.Column="2" Grid.Row="8"/>
+        <ComboBox x:Name="Education" DropDownClosed="OnDropDownClosed" Grid.Column="2" Grid.Row="8">
+            <ComboBoxItem Content="Primary"/>
+            <ComboBoxItem Content="Secondary"/>
+            <ComboBoxItem Content="Tertiary"/>
+        </ComboBox>
         <TextBox x:Name="WorkPosition" LostFocus="LostFocus" Grid.Column="2" Grid.Row="10"/>
         <TextBox x:Name="Salary" LostFocus="LostFocus" Grid.Column="2" Grid.Row="12"/>
         
@@ -72,6 +76,7 @@
         <TextBox x:Name="Education1" IsReadOnly="True" Grid.Column="5" Grid.Row="8" Grid.RowSpan="2"/>
         <TextBox x:Name="WorkPosition1" IsReadOnly="True" Grid.Column="5" Grid.Row="10" Grid.RowSpan="2"/>
         <TextBox x:Name="Salary1" IsReadOnly="True" Grid.Column="5" Grid.Row="12" Grid.RowSpan="2"/>
+        <Button x:Name="Delete1" Click="RemoveEmployee" Content="Delete" Visibility ="Hidden" Grid.Column="5" Grid.Row="15"/>
 
         <Label Content="2" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="0"/>
         <TextBox x:Name="Name2" IsReadOnly="True" Grid.Column="7" Grid.Row="2" Grid.RowSpan="2"/>
@@ -80,7 +85,8 @@
         <TextBox x:Name="Education2" IsReadOnly="True" Grid.Column="7" Grid.Row="8" Grid.RowSpan="2"/>
         <TextBox x:Name="WorkPosition2" IsReadOnly="True" Grid.Column="7" Grid.Row="10" Grid.RowSpan="2"/>
         <TextBox x:Name="Salary2" IsReadOnly="True" Grid.Column="7" Grid.Row="12" Grid.RowSpan="2"/>
-        
+        <Button x:Name="Delete2" Click="RemoveEmployee" Content="Delete" Visibility ="Hidden" Grid.Column="5" Grid.Row="15"/>
+
         <Label Content="3" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="9" Grid.Row="0"/>
         <TextBox x:Name="Name3" IsReadOnly="True" Grid.Column="9" Grid.Row="2" Grid.RowSpan="2"/>
         <TextBox x:Name="Surname3" IsReadOnly="True" Grid.Column="9" Grid.Row="4" Grid.RowSpan="2"/>
@@ -88,7 +94,8 @@
         <TextBox x:Name="Education3" IsReadOnly="True" Grid.Column="9" Grid.Row="8" Grid.RowSpan="2"/>
         <TextBox x:Name="WorkPosition3" IsReadOnly="True" Grid.Column="9" Grid.Row="10" Grid.RowSpan="2"/>
         <TextBox x:Name="Salary3" IsReadOnly="True" Grid.Column="9" Grid.Row="12" Grid.RowSpan="2"/>
-        
+        <Button x:Name="Delete3" Click="RemoveEmployee" Content="Delete" Visibility ="Hidden" Grid.Column="5" Grid.Row="15"/>
+
         <Label Content="4" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="11" Grid.Row="0"/>
         <TextBox x:Name="Name4" IsReadOnly="True" Grid.Column="11" Grid.Row="2" Grid.RowSpan="2"/>
         <TextBox x:Name="Surname4" IsReadOnly="True" Grid.Column="11" Grid.Row="4" Grid.RowSpan="2"/>
@@ -96,7 +103,8 @@
         <TextBox x:Name="Education4" IsReadOnly="True" Grid.Column="11" Grid.Row="8" Grid.RowSpan="2"/>
         <TextBox x:Name="WorkPosition4" IsReadOnly="True" Grid.Column="11" Grid.Row="10" Grid.RowSpan="2"/>
         <TextBox x:Name="Salary4" IsReadOnly="True" Grid.Column="11" Grid.Row="12" Grid.RowSpan="2"/>
-        
+        <Button x:Name="Delete4" Click="RemoveEmployee" Content="Delete" Visibility ="Hidden" Grid.Column="5" Grid.Row="15"/>
+
         <Label Content="5" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.Column="13" Grid.Row="0"/>
         <TextBox x:Name="Name5" IsReadOnly="True" Grid.Column="13" Grid.Row="2" Grid.RowSpan="2"/>
         <TextBox x:Name="Surname5" IsReadOnly="True" Grid.Column="13" Grid.Row="4" Grid.RowSpan="2"/>
@@ -104,5 +112,8 @@
         <TextBox x:Name="Education5" IsReadOnly="True" Grid.Column="13" Grid.Row="8" Grid.RowSpan="2"/>
         <TextBox x:Name="WorkPosition5" IsReadOnly="True" Grid.Column="13" Grid.Row="10" Grid.RowSpan="2"/>
         <TextBox x:Name="Salary5" IsReadOnly="True" Grid.Column="13" Grid.Row="12" Grid.RowSpan="2"/>
+        <Button x:Name="Delete5" Click="RemoveEmployee" Content="Delete" Visibility ="Hidden"  Grid.Column="5" Grid.Row="15"/>
+
+        <Button x:Name="ButtonAddEmployee" Click="AddNewEmployee" Content="Add Employee" IsEnabled="False" HorizontalContentAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="15"/>
     </Grid>
 </Window>
